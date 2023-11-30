@@ -1,0 +1,7 @@
+Heap mitigations:
+
+2.26 := tcache introduced.
+..
+2.32 := safe linking added.
+..
+2.34 := malloc hooks removed.

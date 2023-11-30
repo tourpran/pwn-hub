@@ -1,0 +1,80 @@
+lvl1 
+Basic comparison.
+
+lvl 2
+ebp - 4 6th argument
+ebp - 8 5th argument
+ebp - 24 1st argument
+
+inp: 1 9 8 7 6 5
+
+ebx = 1
+esi = ebp-0x18 (1st argument)
+if ebx<=5:
+	eax = ebx+1
+	eax = eax * esi+ebx*4-4
+	if(esi+ebx*4 != eax):
+		bad
+	ebx += 1
+
+i = 1
+while(i <= 5):
+	x = (i+1) * l[i]
+	if(l[i+1] != x):
+		bad
+	i += 1
+l = [1, 2, 6, 24, 120, 720]
+
+lvl 3
+ebp - 0x4 a
+ebp - 0x5 b
+ebp - 0xc c
+
+if c > 7:
+	bad
+
+eax = c
+
+switch (i):
+	case 0:
+		bl = 0x71
+		if a == 0x309:
+			check char with q 
+
+lvl 4:
+
+def func4(eax):
+	if eax <= 1:
+		return 1
+	p = func4(eax-1)
+	q = func4(eax-2)
+	return p+q
+
+for i in range(10):
+	print(i, func4(i))
+
+lvl 5:
+# 6 letter string
+# srveaw
+# giants
+# ebx : input
+
+edx = 0
+ecx = 0xffffd0a0
+esi = 0x804b220 (isrveawhobpnutfg)
+
+for i in range(6):
+	al = l[edx]
+	al = al & 0xf
+	eax = al
+	al = esi[eax]
+	l[edx] = al
+
+g, i, a, n, t, s
+15, 0, 5, 11, 13, 1
+
+lvl 6:
+
+nodes and comparison of their values. 
+
+PS: Detailed solutions are avalible, these are just my notes.

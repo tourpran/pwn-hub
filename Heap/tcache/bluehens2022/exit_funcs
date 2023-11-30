@@ -1,0 +1,11 @@
+- pointer guard is actually stored in the thread control block. (TCB)
+
+mangling: 
+	- it will XOR with the pointer guard in the thread control block. and the it will shift left by 0x11.
+
+demangling:
+	- This will shift right 0x11 and then XOR to the pointer guard.
+
+attack:
+	- make the pointer guard to 0 
+	- change the exit function to system and argument as the pointer to the string "/bin/sh\x00".
