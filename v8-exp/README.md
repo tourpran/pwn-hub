@@ -11,3 +11,7 @@
 
 * jackHalon - https://jhalon.github.io/chrome-browser-exploitation-1/
 * saelo     - http://www.phrack.org/issues/70/3.html
+
+## PS
+
+This is my current area of research so will be updating this later when I get time.
