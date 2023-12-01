@@ -10,7 +10,7 @@ These are different types of heap attacks.
 |[house of attacks*](./houses/) | will be updating more house of attacks* |
 |[malloc labs](./malloclab-handout/) | create your own malloc :D |
 |[tcache based attacks](./tcache/) | heap overflow to control the tcache list | 
-|[tcache poisoning](./tcache_poisoning/) | defeating safe linking and tampering tcache chunks metadata | 
+|[tcache poisoning](./tcache/tcache_poisoning/) | defeating safe linking and tampering tcache chunks metadata | 
 |[FSOP](./FSOP/) | File structure exploitation and vtable hijacking | 
 <br>
 
