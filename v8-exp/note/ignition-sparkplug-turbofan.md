@@ -62,7 +62,9 @@
 ### Optimizations:
 
 #### Typer phase:
-    - 
+    - This is run by OptimizeGraph.
+    - Whenever there is a builtin function call it associates a type with it.
+	
 
 # refs:
 - https://jhalon.github.io/chrome-browser-exploitation-1
