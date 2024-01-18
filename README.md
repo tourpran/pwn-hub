@@ -5,9 +5,9 @@
 
 topics | links
 --- | --- 
-reversing fundamentals  | [go there](./Reversing_fundamentals/)
-basic attacks           | [go there](./basic_attacks/)
-heap exploitation       | [go there](./Heap/)
+Reversing Fundamentals  | [go there](./Reversing_fundamentals/)
+Basic Stack Attacks           | [go there](./basic_attacks/)
+Heap Exploitation       | [go there](./Heap/)
 V8 Exploitation         | [go there](./v8-exp/)
 pwnable.tw              | [go there](./pwnable.tw/)
 python jail             | [go there](./python-jail-seccomp/)

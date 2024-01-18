@@ -1,1 +1,0 @@
-justCTF{dummy flag}
