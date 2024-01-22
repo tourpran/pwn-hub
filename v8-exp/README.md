@@ -6,6 +6,9 @@
 | --- | --- |
 |[horsepower - picoCTF](./horse_power/) | Exploiting an OOB read and write in array namespace to get shell |
 |[*ctf](./*ctf-oobv8/)| Basic Challenge to exploit oob to change the map to get addrof/fakeobj primitive |
+|[cve-2018-17463](./cve-2018-17463/)| Exploiting a unrecognised side effect in object.create, which helps to cause type confusion. |
+|[math expm1](./expm1-35C3/)| Exploiting an incorrect Range Assumption in Typer.cc and operation-typer.cc. |
+|[General Notes](./note/)| Stuff I take down during my research while learning v8 exploitation and exploring browsers.|
 
 ## Resources:
 

@@ -13,3 +13,4 @@ Any pwner should be able to reverse a challenge, so git gud in reversing.
 
 ## resources:
 * https://crackmes.one/
+* https://doar-e.github.io/archives.html (intresting stuff)
