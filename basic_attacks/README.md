@@ -10,15 +10,15 @@ These are basic stack based attacks. The binary, exploit script are given. Somet
 | [ROP Emporium](https://ropemporium.com/) | Best place to learn the basics of Return Oriented Programming. |
 | [ROP: ORW](./open_read_write/) | make a ROP chain to do open-read-write to read the flag.txt. |
 | [External: SROP](https://tripoloski1337.github.io/ctf/2020/01/26/SigReturn-Oriented-Programming.html)| Sigreturn Oriented Programming, to get control over the registers and call a specific code point. |
-| [Assembly: Restricted Shellcode](./restrictive_shellcode/) | Normal shellcoding challenge with restrictions. |
 | [SEECTF: TLS Canary](./mmap-note/) | getting allocation near the TLS and then leaking canary from Thread Local Storage. To do a stack based attack. |
 
 <br>
 
 | Shellcoding | Description |
 | --- | --- |
-| [deathnote](./../pwnable.tw/deathnote/) | Pretty nice use case for Self Modifying Shellcode when you have some restrictions. pwnable.tw|
 | [start](./../pwnable.tw/start/) | BufferOverflow and a basic 32 bit shellcode to get a shell. pwnable.tw|
+| [Assembly: Restricted Shellcode](./restrictive_shellcode/) | Normal shellcoding challenge with restrictions. |
+| [deathnote](./../pwnable.tw/deathnote/) | Pretty nice use case for Self Modifying Shellcode when you have some restrictions. pwnable.tw|
 | [misc](./../Reversing_fundamentals/assembly-challs/fun-assembly-challenge/)| Suggested in Reversing, construct any path finding algorithm in assembly. mapleCTF |
 
 <br>
