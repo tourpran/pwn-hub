@@ -37,7 +37,7 @@ These are basic stack based attacks. The binary, exploit script are given. Somet
 | [File System](./../ctf/ugra/rust_stuff/) | Race condition in rust due to write_all waiting for data to be recieved in socket. |
 | [RISC-v: Challenge](./smashbaby-riscv/) | ROP but in RISC-V architecture. |
 | [insomni: wasm](./../ctf/insomni/)| Overwriting the index table used by call_indirect to hijack control Flow execution. Good WebAssembly Challenge. | 
-| [Eternal: ret2dlresolve](https://syst3mfailure.io/ret2dl_resolve/)| dl_runtime_resolve is the function that helps to get the actual address of a libc function in the vmmap.|
+| [External: ret2dlresolve](https://syst3mfailure.io/ret2dl_resolve/)| dl_runtime_resolve is the function that helps to get the actual address of a libc function in the vmmap.|
 | [bi0s: pwny racing](./pwnyracing_stack/) | we had a pwny racing in my team. (bi0s) :D. |
 
 <br>
