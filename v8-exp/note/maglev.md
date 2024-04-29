@@ -1,25 +1,42 @@
-# Maglev and CVE-2024-0517
+# Maglev
 
-## What is Maglev:
-- Inbetween optimizing compiler which is after sparkplug and before turbofan. It mainly relies on the feedback from the interpreter.
-- Also generates a control flow graph with nodes called the maglev IR.
-- Prepass:
-    - Analyse through the bytecode and then find the braches and loops.
-    - Collect liveness information 
-- During graph building it will look at the feedback and will create SSA nodes for the types observed.
-    - Additionally it will make a side node that it knows to type of the shape of object, which saves a lot of time.
-    - Same like the turbofan compiler this will make sure to deoptimize once the shape of the object has been changed.
+## Design Docs:
+- SSA compiler purely made for the speed compilation. Also Designed for concurrency.
+- Graph building: Same as turbofan. (with suitable mergin of jump targets).
+- Immediate lowering: with the feedback given from the initial stage we try to lower the instruction as much as possible. (Also using the IC stored properly).
 
-![alt text](image-1.png)
+## Code Generation:
+- Preprocessing:
+    - Assign ID to all the nodes.
+    - Calculate the live range and know how long a node survives in the CFG ?
+    - requirement of what the codegen are based on the input and output, helps the register allocator to resolve only specific registers.
+- Register Allocations:
+    - basically uses the regiters when a specific node needs, can also ask several regs for input.
+- Machine code generation:
+    - Converts the nodes into the specific machine code using the Macro-assembler. 
+- Kicks in when there is around 400 invocations of a specific code. Sits after the sparkplug and the turbofan.
 
-## CVE-2024-0517
-- 
+![](./image-1.png)
 
-## What is ubercage:
-- V8 sandbox that tries to enforce memory read and write even after a succeful v8 exploit. Doesnt allow writes beyond the v8 heap sandbox.
-- Even the full pointer to the backing store in ArrayBuffer is removed. Finally the pointers to code execution are stored in a table of pointers, kinda like webassembly ig.
+## OSR:
+- if there is a function f() calling and a small function g() then in the stack there will be 2 seperate frames for f and g, which will be merged into 1, this is OSR.
 
-### Ref:
-- https://blog.exodusintel.com/2024/01/19/google-chrome-v8-cve-2024-0517-out-of-bounds-write-code-execution/
-- https://v8.dev/blog/maglev
-- https://docs.google.com/document/d/13CwgSL4yawxuYg3iNlM-4ZPCB8RgJya6b8H_E2F-Aek/edit
+## Code Audit (High Level): 
+- compile:
+    - Start the graph building phase:
+        - Initializes and Allocates the registers whereever it is necessary, not sure.
+        - loop peeling: bring some computation out of the loop, for better performance. Merges the above and below offsets that were peeled? 
+        - Starting the collection of liveness for each node for build_merge_states
+    - Also find some dead code points. too much complexity and depth so leaving as such.
+    - phi untagging:
+        - make the phi node untagged: meaning untag it from the input nodes they were born from. 
+        - maglev removes untagged phi and keeps some of it which can't be untagged.
+        - So where ever it is possible, it will convert the tagged phi to simpler types like smi, double ...
+
+### Questions to asnwer:
+- What is maglev:
+- When does it kick in: 
+- What is the high level architecture - (bytecode is converted to maglev IR -> lowered into assembly):
+- What each file does on a high level:
+- opt pipeline if any:
+- where is the code gen:
