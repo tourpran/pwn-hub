@@ -14,6 +14,7 @@ These are different types of heap attacks.
 |[crewCTF: company](./../ctf/crewCTF23/company/) | Heap UAF alongside seccomp, so have to do some ROP misc to leak the file names and print those contents. |
 |[tcache based attacks](./tcache/) | heap overflow to control the tcache list | 
 |[tcache poisoning](./tcache/tcache_poisoning/) | defeating safe linking and tampering tcache chunks metadata | 
+|[tcache stashing](./../ctf/umdctf/chisel/)| Basic Usage of stashing the smallbins into the tcache. |
 |[FSOP](./FSOP/) | File structure exploitation and vtable hijacking | 
 |[HTB: runic, Hard](./../ctf/htb/runic/) | Custom Hash function has a bug, pretty intresting challenge. Combined with a libc GOT overwrite. | 
 

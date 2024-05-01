@@ -1,6 +1,9 @@
-# Virtual machine
+# Virtual Machine
 
-Tried to write a VM disassembler which would break down the opcodes in the binary and provide meaningful code. Lost intrest so this is incomplete, mb :')
+| Topic | Navigate |
+|---|---|
+|[Reversing VM](./reverse_VM/)| Building a disassembler for the given VM to understand its functionality |
+|[pwn VM](./VM_easy/)| Very easy OOB challenge. Sets premise for a major bug class in most VMs |
 
 resources:
 

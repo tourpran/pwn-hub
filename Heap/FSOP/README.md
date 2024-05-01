@@ -7,5 +7,6 @@ Best place to start FSOP is PWN College:
 
 | Challenges |  Difficulty level |
 |---|---|
-|[chall 1](./chall-haklu/)| Medium |
-|[chall 2](./anotherone/chall.c)| Medium Hard |
+|[practice chall 1](./chall-haklu/)| easy Medium |
+|[practice chall 2](./anotherone/chall.c)| Medium Hard |
+|[umdctf: ornithopter](./../../ctf/umdctf/ornithopter/)| Medium Hard |
