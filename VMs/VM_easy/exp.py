@@ -7,7 +7,7 @@ exe = "./vm2"
 libc = ELF("/lib/x86_64-linux-gnu/libc.so.6")
 context.binary = elf = ELF(exe)
 context.log_level = "debug"
-context.aslr = False
+#context.aslr = False
 
 def start(argv=[], *a, **kw):
     '''Start the exploit against the target.'''
