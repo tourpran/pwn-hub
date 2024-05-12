@@ -7,6 +7,10 @@
 |[horsepower - picoCTF](./horse_power/) | Exploiting an OOB read and write in array namespace to get shell |
 |[*ctf](./starctf/)| Basic Challenge to exploit oob to change the map to get addrof/fakeobj primitive |
 
+| Maglev - compiler: V8 Engine | description | 
+| --- | --- |
+|[cve-2024-0517](./cve-2024-0517/) | Exploiting `folded allocation`(optimization), causes UAF across Garbage Collection runs. |
+
 | Turbofan - JIT Compiler: V8 Engine| Description |
 | --- | --- |
 |[cve-2018-17463](./cve-2018-17463/)| Exploiting a unrecognised side effect in object.create, which helps to cause type confusion. |
