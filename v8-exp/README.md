@@ -10,6 +10,7 @@
 | Maglev - compiler: V8 Engine | description | 
 | --- | --- |
 |[cve-2024-0517](./cve-2024-0517/) | Exploiting `folded allocation`(optimization), causes UAF across Garbage Collection runs. |
+|[ArrayShift](./ArrayShift/)| Exploiting a Race Condition between turbofan thread & Main thread through ArrayShift. (Double Reference)|
 
 | Turbofan - JIT Compiler: V8 Engine| Description |
 | --- | --- |
