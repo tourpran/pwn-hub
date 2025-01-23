@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+gcc exp.c -o exp
+mount rootfs.ext2 rootfs -t ext2
+cp exp ./rootfs
+umount ./rootfs
+
+./run.sh
